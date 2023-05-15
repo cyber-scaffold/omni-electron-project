@@ -1,6 +1,8 @@
 import { app, BrowserWindow } from "electron";
 // import { initial_mysql_pool, get_mysql_connection } from "@/electrons/frameworks/mysql_pool_config";
 
+// console.log("asdadas");
+
 app.on("ready", async () => {
   const window = new BrowserWindow({
     width: 1920,
