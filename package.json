@@ -25,11 +25,13 @@
   },
   "dependencies": {
     "@babel/core": "^7.21.8",
+    "@electron/get": "^2.0.2",
     "amqplib": "^0.10.3",
     "babel-plugin-module-resolver": "^5.0.0",
     "cross-spawn": "^7.0.3",
     "electron": "^24.3.0",
     "glob": "^7.2.3",
+    "global-agent": "^3.0.0",
     "html-webpack-plugin": "^5.5.1",
     "ioredis": "^5.3.1",
     "jsonfile": "^6.1.0",
