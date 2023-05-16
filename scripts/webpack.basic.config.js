@@ -36,6 +36,7 @@ module.exports = {
     path: path.resolve(process.cwd(), "./dist/"),
     filename: "index.js",
   },
+  target: "electron-renderer",
   resolve: {
     extensions: [".js", ".json", ".ts", ".tsx"],
     alias: {
