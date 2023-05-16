@@ -31,21 +31,22 @@ const use_public_style_loader_list = [{
 }];
 
 module.exports = {
-  entry: path.resolve(__dirname, "../src/index.tsx"),
+  entry: path.resolve(process.cwd(), "./src/index.js"),
   output: {
-    path: path.resolve(__dirname, "../dist/"),
+    path: path.resolve(process.cwd(), "./dist/"),
     filename: "index.js",
   },
   resolve: {
+    extensions: [".js", ".json", ".ts", ".tsx"],
     alias: {
-      "@": path.resolve(__dirname, "../src/"),
+      "@": path.resolve(process.cwd(), "./src/"),
       "@@": process.cwd(),
     }
   },
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      template: path.resolve(__dirname, "../src/index.html")
+      template: path.resolve(process.cwd(), "./src/index.html")
     })
   ],
   module: {

@@ -1,11 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import { Button } from "antd";
+import IndexPage from "@/pages/IndexPage";
 
 const container = document.createElement("div");
 document.body.appendChild(container);
 
-ReactDOM.render((
-  <Button type="primary">adasd</Button>
-), container);
+ReactDOM.render((<IndexPage />), container);
