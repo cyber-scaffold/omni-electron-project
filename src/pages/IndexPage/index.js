@@ -9,7 +9,7 @@ import { Button } from "antd";
 
 export default function IndexPage(props) {
   return (
-    <Button type="primary">adasd</Button>
+    <Button type="primary">测试按钮</Button>
   )
 };
 
