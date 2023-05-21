@@ -16,7 +16,9 @@ module.exports = async function typescript_compair() {
     await promisify(fs.mkdir)(dist_directory_path, { recursive: true });
   };
   /** 匹配所有的ts文件 **/
-  const source_code_files = await promisify(glob)(source_code_path);
+  const source_code_files = await promisify(glob)(source_code_path, {
+    ignore: path.resolve(__dirname, "../src/application/")
+  });
   /** 执行ts文件的编译事务 **/
   const compair_transcation = source_code_files.map(async (single_source_file_path) => {
     const dist_code_path = single_source_file_path.replace(source_directory_path, dist_directory_path).replace(".ts", ".js");
@@ -31,6 +33,7 @@ module.exports = async function typescript_compair() {
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "es2016",
+        "allowJs": true,
         "module": "commonjs",
         "moduleResolution": "node",
         "resolveJsonModule": true,

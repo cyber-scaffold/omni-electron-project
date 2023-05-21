@@ -12,6 +12,7 @@
     "target": "es2016",
     "module": "commonjs",
     "baseUrl": "./src/",
+    "allowJs": true,
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "outDir": "./dist/",

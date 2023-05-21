@@ -31,9 +31,9 @@ const use_public_style_loader_list = [{
 }];
 
 module.exports = {
-  entry: path.resolve(process.cwd(), "./src/index.js"),
+  entry: path.resolve(process.cwd(), "./src/application/index.tsx"),
   output: {
-    path: path.resolve(process.cwd(), "./dist/"),
+    path: path.resolve(process.cwd(), "./dist/application/"),
     filename: "index.js",
   },
   target: "electron-renderer",
@@ -47,7 +47,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: false,
-      template: path.resolve(process.cwd(), "./src/index.html")
+      template: path.resolve(process.cwd(), "./src/application/index.html")
     })
   ],
   module: {
