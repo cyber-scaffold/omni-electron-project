@@ -15,9 +15,9 @@ app.on("ready", async () => {
       nodeIntegration: true,
       contextIsolation: false,
       nodeIntegrationInWorker: true,
-      preload: path.resolve(app.getAppPath(), "./preload.js")
+      preload: path.resolve(app.getAppPath(), "./dist/preload.js")
     }
   });
-  window.loadFile("./index.html");
+  window.loadFile(path.resolve(app.getAppPath(), "./dist/index.html"));
   window.webContents.openDevTools();
 });

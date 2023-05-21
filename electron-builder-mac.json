@@ -1,10 +1,9 @@
 {
-  "appId": "electron-umi-project",
-  "productName": "electron-umi-project",
   "copyright": "",
   "directories": {
     "output": "./assets/macos/"
   },
+  "asar": false,
   "mac": {
     "entitlements": "./entitlements.mac.plist",
     "hardenedRuntime": true,

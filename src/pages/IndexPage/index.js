@@ -15,12 +15,10 @@ export default function IndexPage(props) {
   )
 };
 
-
 IndexPage.propTypes = {
 
-
 };
-IndexPage.defaultProps = {
 
+IndexPage.defaultProps = {
 
 };

@@ -8,4 +8,8 @@ import IndexPage from "@/pages/IndexPage";
 const container = document.createElement("div");
 document.body.appendChild(container);
 
-ReactDOM.render((<IndexPage />), container);
+ReactDOM.render((
+  <BasicLayout>
+    <IndexPage />
+  </BasicLayout>
+), container);
