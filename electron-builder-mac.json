@@ -4,6 +4,9 @@
     "output": "./assets/macos/"
   },
   "asar": false,
+  "files": [
+    "./dist/**/*"
+  ],
   "mac": {
     "entitlements": "./entitlements.mac.plist",
     "hardenedRuntime": true,
