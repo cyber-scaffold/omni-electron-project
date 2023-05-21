@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import IndexPage from "@/application/pages/IndexPage";
+import BasicLayout from "@/layouts/BasicLayout"
+import IndexPage from "@/pages/IndexPage";
 
 
 const container = document.createElement("div");

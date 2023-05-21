@@ -5,6 +5,7 @@ import { app, BrowserWindow } from "electron";
 //@ts-ignore
 process.env.ELECTRON_DISABLE_SECURITY_WARNINGS = false;
 
+
 app.on("ready", async () => {
   const window = new BrowserWindow({
     width: 1920,
@@ -17,6 +18,6 @@ app.on("ready", async () => {
       preload: path.resolve(app.getAppPath(), "./preload.js")
     }
   });
-  window.loadFile("./application/index.html");
+  window.loadFile("./index.html");
   window.webContents.openDevTools();
 });

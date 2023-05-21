@@ -1,7 +1,7 @@
 const { merge } = require("webpack-merge");
-const webpack_basic_config = require("./webpack.basic.config");
+const webpack_process_config = require("../basic/webpack.process.basic.config");
 
 module.exports = merge({
   mode: "development",
   devtool: "source-map",
-}, webpack_basic_config);
+}, webpack_process_config);

@@ -7,18 +7,18 @@ import { Button } from "antd";
 // import css from "./style.scss";
 // import css from "./style.less";
 
-export default function IndexPage(props) {
+export default function BasicLayout(props) {
+  const { children } = props;
   return (
-    <Button type="primary">测试按钮</Button>
+    <div>{children}</div>
   )
 };
 
 
-IndexPage.propTypes = {
-
+BasicLayout.propTypes = {
 
 };
-IndexPage.defaultProps = {
 
+BasicLayout.defaultProps = {
 
 };
