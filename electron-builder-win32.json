@@ -1,7 +1,7 @@
 {
   "copyright": "",
   "directories": {
-    "output": "./assets/windows/"
+    "output": "./assets/windows32/"
   },
   "asar": false,
   "files": [

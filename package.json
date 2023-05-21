@@ -6,8 +6,9 @@
   "scripts": {
     "dev": "node ./scripts/bootstrap.js",
     "build": "node ./scripts/build.js",
-    "pack:win": "electron-builder --windows --config=electron-builder-win.json",
-    "pack:mac": "electron-builder --macos --config=electron-builder-mac.json"
+    "pack:mac": "electron-builder --macos --config=electron-builder-mac.json",
+    "pack:win32": "electron-builder --ia32 --windows --config=electron-builder-win32.json",
+    "pack:win64": "electron-builder --x64 --windows --config=electron-builder-win64.json"
   },
   "keywords": [],
   "author": "",
