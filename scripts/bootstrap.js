@@ -11,6 +11,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
 
 (async () => {
 
+
   await promisify(fs.rm)(path.resolve(process.cwd(), "./dist/"), { recursive: true, force: true });
 
   const process_task_list = [];
@@ -20,7 +21,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
   ], { persistent: true });
   watcher.on("all", async () => {
     process_task_list.forEach((single_process_task) => single_process_task.kill());
-    process_task_list.push(spawn("electron", [path.resolve(process.cwd(), "./dist/process.js")], { stdio: "inherit" }));
+    process_task_list.push(spawn("electron", [process.cwd()], { stdio: "inherit" }));
   });
 
   /** 编译前端文件 **/
