@@ -45,6 +45,7 @@
   "dependencies": {
     "amqplib": "^0.10.3",
     "antd": "^5.5.0",
+    "chokidar": "^3.5.3",
     "cross-spawn": "^7.0.3",
     "glob": "^7.2.3",
     "ioredis": "^5.3.1",
