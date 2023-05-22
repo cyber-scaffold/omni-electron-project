@@ -7,7 +7,7 @@ import { Button } from "antd";
 // import css from "./style.scss";
 // import css from "./style.less";
 
-export default function IndexPage(props) {
+export function IndexPage(props) {
   return (
     <Button type="primary">
       测试按钮
