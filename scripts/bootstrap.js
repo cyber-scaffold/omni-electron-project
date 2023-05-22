@@ -11,7 +11,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
 
 (async () => {
 
-  await promisify(fs.rm)(path.resolve(process.cwd(), "./dist/"), { recursive: true });
+  await promisify(fs.rm)(path.resolve(process.cwd(), "./dist/"), { recursive: true, force: true });
 
   const process_task_list = [];
 
