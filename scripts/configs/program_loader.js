@@ -15,6 +15,8 @@ module.exports = [{
   use: [{
     loader: "babel-loader",
     options: {
+      cacheDirectory: true,
+      cacheCompression: false,
       configFile: path.join(process.cwd(), "./.babelrc.js")
     }
   }]

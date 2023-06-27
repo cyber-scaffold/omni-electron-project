@@ -1,11 +1,17 @@
 const path = require("path");
+const WebpackBar = require("webpackbar");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 const file_loader = require("../../configs/file_loader");
 const program_loader = require("../../configs/program_loader");
 const use_public_style_loader_list = require("../../configs/use_public_style_loader_list");
 
 module.exports = {
+  cache: {
+    type: "filesystem",
+    allowCollectingMemory: true,
+  },
   entry: path.resolve(process.cwd(), "./src/application.tsx"),
   output: {
     path: path.resolve(process.cwd(), "./dist/"),
@@ -20,6 +26,8 @@ module.exports = {
     }
   },
   plugins: [
+    new NodePolyfillPlugin(),
+    new WebpackBar({ name: "编译客户度" }),
     new HtmlWebpackPlugin({
       inject: false,
       template: path.resolve(process.cwd(), "./src/index.html")

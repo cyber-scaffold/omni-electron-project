@@ -23,7 +23,7 @@ app.on("ready", async () => {
       preload: path.resolve(app.getAppPath(), "./preload.js")
     }
   });
-  const html_file_path = `file://${path.resolve(app.getAppPath(), "./index.html")}#/home`;
+  const html_file_path = `file://${path.join(path.dirname(__filename), "./index.html")}#/home`;
   window.loadURL(html_file_path);
   window.webContents.openDevTools();
 });

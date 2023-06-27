@@ -2,8 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const spawn = require("cross-spawn");
 const chokidar = require("chokidar");
-const { webpack } = require("webpack");
 const { promisify } = require("util");
+const { webpack } = require("webpack");
 
 const webpack_application_dev_config = require("./webpack/development/webpack.application.dev.config");
 const webpack_preload_dev_config = require("./webpack/development/webpack.preload.dev.config");
@@ -19,9 +19,10 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
   const watcher = chokidar.watch([
     path.resolve(process.cwd(), "./dist/process.js")
   ], { persistent: true });
+
   watcher.on("all", async () => {
     process_task_list.forEach((single_process_task) => single_process_task.kill());
-    process_task_list.push(spawn("electron", [process.cwd()], { stdio: "inherit" }));
+    process_task_list.push(spawn("electron", [path.resolve(process.cwd())], { stdio: "inherit" }));
   });
 
   /** 编译前端文件 **/
