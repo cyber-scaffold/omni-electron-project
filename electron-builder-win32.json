@@ -1,4 +1,5 @@
 {
+  "productName": "Electron客户端应用",
   "copyright": "",
   "directories": {
     "output": "./assets/windows32/"
