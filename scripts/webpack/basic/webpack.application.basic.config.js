@@ -10,6 +10,7 @@ const use_public_style_loader_list = require("../../configs/use_public_style_loa
 module.exports = {
   cache: {
     type: "filesystem",
+    memoryCacheUnaffected: true,
     allowCollectingMemory: true,
   },
   entry: path.resolve(process.cwd(), "./src/application.tsx"),

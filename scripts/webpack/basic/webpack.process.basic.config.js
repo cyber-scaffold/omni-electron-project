@@ -8,6 +8,7 @@ const program_loader = require("../../configs/program_loader");
 module.exports = {
   cache: {
     type: "filesystem",
+    memoryCacheUnaffected: true,
     allowCollectingMemory: true,
   },
   entry: path.resolve(process.cwd(), "./src/process.ts"),
