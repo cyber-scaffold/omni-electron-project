@@ -26,3 +26,9 @@ declare module '*.module.styl' {
 declare module '*.xlsx' {
   export default string;
 }
+
+declare var process: {
+  env: {
+    ELECTRON_DISABLE_SECURITY_WARNINGS: boolean;
+  }
+};
