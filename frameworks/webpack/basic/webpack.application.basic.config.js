@@ -10,6 +10,7 @@ const use_public_style_loader_list = require("../../configs/use_public_style_loa
 module.exports = {
   entry: path.resolve(process.cwd(), "./src/application.tsx"),
   output: {
+    clean: false,
     path: path.resolve(process.cwd(), "./dist/application/"),
     filename: "main.js",
   },

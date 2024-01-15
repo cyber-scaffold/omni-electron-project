@@ -6,13 +6,9 @@ const file_loader = require("../../configs/file_loader");
 const program_loader = require("../../configs/program_loader");
 
 module.exports = {
-  cache: {
-    type: "filesystem",
-    memoryCacheUnaffected: true,
-    allowCollectingMemory: true,
-  },
   entry: path.resolve(process.cwd(), "./src/preload.ts"),
   output: {
+    clean: false,
     path: path.resolve(process.cwd(), "./dist/"),
     filename: "preload.js",
   },
