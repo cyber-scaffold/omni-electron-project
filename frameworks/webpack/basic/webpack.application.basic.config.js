@@ -11,8 +11,8 @@ module.exports = {
   entry: path.resolve(process.cwd(), "./src/application.tsx"),
   output: {
     clean: false,
-    path: path.resolve(process.cwd(), "./dist/application/"),
-    filename: "main.js",
+    path: path.resolve(process.cwd(), "./dist/"),
+    filename: "application.js",
   },
   target: "electron-renderer",
   resolve: {

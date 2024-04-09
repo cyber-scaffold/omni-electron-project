@@ -30,11 +30,10 @@ if (!isFirstInstance) {
         nodeIntegration: true,
         contextIsolation: false,
         nodeIntegrationInWorker: true,
-        preload: path.resolve(app.getAppPath(), "./preload.js")
+        preload: path.resolve(app.getAppPath(), "./dist/preload.js")
       }
     });
-    const html_file_path = `file://${path.join(path.dirname(__filename), "./application/index.html")}#/home`;
-    window.loadURL(html_file_path);
-    window.webContents.openDevTools();
+    await window.loadFile(path.resolve(app.getAppPath(), "./dist/index.html"), { hash: "/home" });
+    await window.webContents.openDevTools();
   });
 };

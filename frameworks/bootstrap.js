@@ -22,7 +22,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
 
   watcher.on("all", async () => {
     process_task_list.forEach((single_process_task) => single_process_task.kill());
-    process_task_list.push(spawn("electron", [path.resolve(process.cwd(), "./dist/process.js")], { stdio: "inherit" }));
+    process_task_list.push(spawn("electron", [path.resolve(process.cwd())], { stdio: "inherit" }));
   });
 
   /** 编译前端文件 **/
@@ -56,7 +56,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
     } else {
       console.log(stats.toString({ colors: true }));
       process_task_list.forEach((single_process_task) => single_process_task.kill());
-      process_task_list.push(spawn("electron", [path.resolve(process.cwd(), "./dist/process.js")], { stdio: "inherit" }));
+      process_task_list.push(spawn("electron", [path.resolve(process.cwd())], { stdio: "inherit" }));
     };
   });
 
