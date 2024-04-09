@@ -10,7 +10,7 @@ const webpack_process_dev_config = require("./webpack/development/webpack.proces
 
 const dist_path = path.resolve(process.cwd(), "./dist/");
 
-(async () => {
+setImmediate(async () => {
 
   if (await pathExists(dist_path)) {
     /** 清理dist文件夹 **/
@@ -51,4 +51,4 @@ const dist_path = path.resolve(process.cwd(), "./dist/");
     };
   });
 
-})();
+});

@@ -1,7 +1,7 @@
 const { bootstrap } = require("global-agent");
 const { downloadArtifact } = require("@electron/get");
 
-(async () => {
+setImmediate(async () => {
 
   console.log(process.env.http_proxy);
   process.env.http_proxy && (process.env.GLOBAL_AGENT_HTTP_PROXY = process.env.http_proxy);
@@ -18,4 +18,4 @@ const { downloadArtifact } = require("@electron/get");
   });
 
   console.log("zipFilePath", zipFilePath);
-})();
+});

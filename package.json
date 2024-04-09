@@ -4,6 +4,7 @@
   "description": "基于typescript的electron项目",
   "main": "./dist/process.js",
   "scripts": {
+    "launch": "electron .",
     "dev": "node ./frameworks/bootstrap.js",
     "build": "node ./frameworks/build.js",
     "pack:mac": "electron-builder --macos --config=electron-builder-mac.json",
